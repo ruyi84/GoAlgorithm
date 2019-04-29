@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-Definition for singly-linked list.
+//Definition for singly-linked list.
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -14,5 +14,5 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 func main() {
-	addTwoNumbers([2, 1, 3], [5, 6, 4])
+	//addTwoNumbers([2, 1, 3], [5, 6, 4])
 }
