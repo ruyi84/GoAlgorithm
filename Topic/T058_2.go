@@ -10,18 +10,7 @@ import "fmt"
 func lengthOfLastWord2(s string) int {
 	Len1 := 0
 	Len := 0
-	for _, v := range s {
 
-		if v == 32 {
-			Len = 0
-			continue
-		}
-		Len1++
-		if Len == 0 {
-			Len1 = 1
-		}
-		Len = Len1
-	}
 	return Len1
 }
 
