@@ -6,6 +6,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func (l *ListNode) apeend(l1 *ListNode) {
+	l.Next = l1
+}
+
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	num1 := l1.Val
 	num2 := l1.Val
@@ -26,7 +30,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 func main() {
-	//addTwoNumbers([2, 1, 3], [5, 6, 4])
+
 }
 
 /*
