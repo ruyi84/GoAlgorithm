@@ -1,0 +1,18 @@
+package main
+
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+
+func longestUnivaluePath(root *TreeNode) int {
+
+}
+
+func maxLong(root *TreeNode, leftNum, rightNum int) {
+
+}
