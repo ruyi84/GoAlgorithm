@@ -15,7 +15,7 @@ func maxProfit2(prices []int) int {
 	return max
 }
 
-func maxProfit(prices []int) int {
+func maxProfit3(prices []int) int {
 	if len(prices) < 2 {
 		return 0
 	}
@@ -33,6 +33,6 @@ func maxProfit(prices []int) int {
 
 func main() {
 	i := []int{7, 1, 5, 3, 6, 4}
-	num := maxProfit(i)
+	num := maxProfit3(i)
 	fmt.Println(num)
 }
