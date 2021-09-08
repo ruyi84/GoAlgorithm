@@ -1,28 +1,33 @@
 package main
 
-func addTwoNumbers_2(l1 *ListNode, l2 *ListNode) *ListNode {
+import "fmt"
 
-	if l1 == nil && l2 == nil {
-		return nil
-	}
-
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1 == nil {
-		return l2
+		l1 = new(ListNode)
+	}
+	if l2 == nil {
+		l2 = new(ListNode)
 	}
 
-	if l2 == nil {
+	l1.Val += l2.Val
+	if l1.Val >= 10 {
+		fmt.Println(l1.Val)
+		l1.Val %= 10
+		if l1.Next == nil {
+			l1.Next = &ListNode{
+				Val: 1,
+			}
+		} else {
+			l1.Next.Val += 1
+		}
+	}
+
+	if l1.Next == nil && l2.Next == nil {
 		return l1
 	}
 
-	sum := l1.Val + l2.Val
+	l1.Next = addTwoNumbers(l1.Next, l2.Next)
 
-	nextNode := addTwoNumbers_2(l1, l2)
-
-	if sum < 10 {
-		return &ListNode{Val: sum, Next: nextNode}
-	} else {
-
-	}
-
-	return nextNode
+	return l1
 }
