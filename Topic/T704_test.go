@@ -36,3 +36,25 @@ func search2(nums []int, target int) int {
 
 	return -1
 }
+
+func search3(nums []int, target int) int {
+	mid, left, right := len(nums)/2, 0, len(nums)-1
+
+	for left <= right {
+		if nums[mid] == target{
+			return mid
+		}
+
+		if nums[mid] > target{
+			right = mid-1
+
+		}else {
+			left = mid+1
+		}
+
+		mid = (left+right) /2
+
+	}
+
+	return -1
+}

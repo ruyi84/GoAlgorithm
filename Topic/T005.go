@@ -4,13 +4,6 @@ import "fmt"
 
 func longestPalindrome(s string) string {
 
-	for k, v := range s {
-		for i := 0; i < len(s); i++ {
-			if v == s[len(s)-i] {
-
-			}
-		}
-	}
 	return s
 }
 
